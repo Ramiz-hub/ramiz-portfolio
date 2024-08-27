@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ramiz Baghirov</title>
+    <meta name="description" content="" />
+    <meta itemprop=name content="Ramiz Baghirov - Creative developer">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content=/images/mask.png>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ramiz Baghirov - Creative UI/UX Designer">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <meta property="og:site_name" content="Ramiz Baghirov - Creative developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Ramiz Baghirov - Creative UI/UX Designer">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <canvas class="canvas js-canvas"></canvas>
+    <img id="chat-icon" src="images/chat-icon.png" alt="Chat Icon" />
+    <div class="messenger-container">
+        <div class="chat-log" id="chat-log">
+            <div class="chat-message bot-message">Welcome to Cyberpunk Support! How can I help you today?</div>
+        </div>
+        <div class="user-input">
+            <input type="text" id="user-message" placeholder="Type your message..." />
+            <button id="send-button">Send</button>
+        </div>
+        <div class="quick-questions">
+            <button class="quick-question">What is the purpose of this app?</button>
+            <button class="quick-question">How do I use the features?</button>
+            <button class="quick-question">Who created this?</button>
+        </div>
+    </div>    
+    <script type="module" src="./index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3966601-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date())
+        gtag('config', 'UA-3966601-5')
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const chatLog = document.getElementById('chat-log');
+    const userMessageInput = document.getElementById('user-message');
+    const sendButton = document.getElementById('send-button');
+    const quickQuestions = document.querySelectorAll('.quick-question');
+    const chatIcon = document.getElementById('chat-icon');
+    const messengerContainer = document.querySelector('.messenger-container');
+
+    const botResponses = {
+        "What is the purpose of this app?": "This app is designed to showcase a cyberpunk-themed 3D experience using Three.js.",
+        "How do I use the features?": "You can interact with the 3D scene, explore the environment, and use the contact form to get in touch.",
+        "Who created this?": "This project was created by a talented UI/UX Designer (Ramiz Baghirov) inspired by the cyberpunk genre."
+    };
+
+    function appendMessage(message, sender = 'user') {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('chat-message');
+        messageElement.classList.add(sender === 'bot' ? 'bot-message' : 'user-message');
+        messageElement.textContent = message;
+        chatLog.appendChild(messageElement);
+        chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function handleUserMessage() {
+        const message = userMessageInput.value.trim();
+        if (message) {
+            appendMessage(message, 'user');
+            userMessageInput.value = '';
+
+            setTimeout(() => {
+                const response = botResponses[message] || "I'm sorry, I don't have an answer for that.";
+                appendMessage(response, 'bot');
+            }, 500);
+        }
+    }
+
+    sendButton.addEventListener('click', handleUserMessage);
+    userMessageInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            handleUserMessage();
+        }
+    });
+
+    quickQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+            const question = button.textContent;
+            appendMessage(question, 'user');
+
+            setTimeout(() => {
+                const response = botResponses[question] || "I'm sorry, I don't have an answer for that.";
+                appendMessage(response, 'bot');
+            }, 500);
+        });
+    });
+
+    chatIcon.addEventListener('click', () => {
+        if (messengerContainer.classList.contains('show')) {
+            messengerContainer.classList.remove('show');
+        } else {
+            messengerContainer.classList.add('show');
+        }
+    });
+
+    messengerContainer.classList.remove('show');
+});
+    </script>
+</body>
+</html>

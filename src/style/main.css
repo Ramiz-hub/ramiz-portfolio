@@ -1,0 +1,204 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.canvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.canvas.has-cursor-grab
+{
+    cursor: grab;
+}
+
+.canvas.has-cursor-grabbing
+{
+    cursor: grabbing;
+}
+
+.canvas.has-cursor-pointer
+{
+    cursor: pointer;
+}
+
+
+.messenger-container {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 350px;
+    height: 500px;
+    background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+    border: 2px solid #888;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 3px #333, inset 0px 0px 15px 3px #555;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    top: 100px;
+    z-index: 1000;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    background-image: radial-gradient(circle at center, #4f4f4f 0%, #1a1a1a 70%);
+}
+
+#chat-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #3a3a3a, #2b2b2b);
+    border: 2px solid #aaa;
+    box-shadow: 0px 0px 20px 5px #aaa, inset 0px 0px 10px #555;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chat-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 30px rgba(150, 150, 150, 0.6);
+}
+
+.messenger-container.show {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(150, 150, 150, 0.8), inset 0px 0px 20px rgba(80, 80, 80, 0.8);
+}
+
+.chat-log {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px #555;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bot-message {
+    background-color: #ff5733;
+    color: white;
+    box-shadow: 0px 0px 10px #ff5733;
+}
+
+.user-message {
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0px 0px 10px #3498db;
+    align-self: flex-end;
+}
+
+.user-input {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.user-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #ecf0f1;
+    font-size: 14px;
+    box-shadow: inset 0px 0px 10px #555;
+    outline: none;
+}
+
+.user-input button {
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 15px #8e44ad;
+}
+
+.user-input button:hover {
+    background-color: #9b59b6;
+    box-shadow: 0px 0px 20px #9b59b6;
+}
+
+.quick-questions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quick-question {
+    background-color: #27ae60;
+    color: white;
+    border: 2px solid #27ae60;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.quick-question:last-child {
+    margin-right: 0;
+}
+
+.quick-question:hover {
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    box-shadow: 0px 0px 15px #2ecc71;
+}
+
+.chat-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 650px;
+    width: 60px;
+    height: 60px;
+    background-color: #c0392b;
+    color: white;
+    border: 2px solid #888;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0px 0px 20px #c0392b, inset 0px 0px 10px #555;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.chat-icon:hover {
+    background-color: #e74c3c;
+    box-shadow: 0px 0px 30px #e74c3c, inset 0px 0px 15px #777;
+}
