@@ -82,6 +82,69 @@ export default class ProjectsSection
                     }
                 },
             },
+            {
+                name: 'Ramiz Baghirov | 2 project',
+                imageSources:
+                [
+                    './models/projects/greenhave/slideA.png',
+                    './models/projects/greenhave/slideB.png',
+                ],
+                floorTexture: this.resources.items.projectsGreenHaveFloorTexture,
+                link:
+                {
+                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    x: - 4.8,
+                    y: - 3,
+                    halfExtents:
+                    {
+                        x: 3.2,
+                        y: 1.5
+                    }
+                },
+            },
+            {
+                name: 'Ramiz Baghirov | 3 project',
+                imageSources:
+                [
+                    './models/projects/timeless/slideA.png',
+                    './models/projects/timeless/slideB.png',
+                    './models/projects/timeless/slideC.png',
+                ],
+                floorTexture: this.resources.items.projectsTimelessFloorTexture,
+                link:
+                {
+                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    x: - 4.8,
+                    y: - 3,
+                    halfExtents:
+                    {
+                        x: 3.2,
+                        y: 1.5
+                    }
+                },
+            },
+            {
+                name: 'Ramiz Baghirov | 4 project',
+                imageSources:
+                [
+                    './models/projects/vegieats/slideA.png',
+                    './models/projects/vegieats/slideB.png',
+                    './models/projects/vegieats/slideC.png',
+                    './models/projects/vegieats/slideD.png',
+                ],
+                floorTexture: this.resources.items.projectsVegiEatsFloorTexture,
+                link:
+                {
+                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    x: - 4.8,
+                    y: - 3,
+                    halfExtents:
+                    {
+                        x: 3.2,
+                        y: 1.5
+                    }
+                },
+            },
         ]
     }
 
