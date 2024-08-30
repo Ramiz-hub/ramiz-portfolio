@@ -63,7 +63,7 @@ export default class ProjectsSection
     {
         this.list = [
             {
-                name: 'Ramiz Baghirov | 1 project',
+                name: 'Ramiz Baghirov | Universe',
                 imageSources:
                 [
                     './models/projects/universe/slideA.webp',
@@ -72,7 +72,7 @@ export default class ProjectsSection
                 floorTexture: this.resources.items.projectsUniverseFloorTexture,
                 link:
                 {
-                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    href: 'https://aqua-service-371025.framer.app/',
                     x: - 4.8,
                     y: - 3,
                     halfExtents:
@@ -83,7 +83,7 @@ export default class ProjectsSection
                 },
             },
             {
-                name: 'Ramiz Baghirov | 2 project',
+                name: 'Ramiz Baghirov | GreenHave',
                 imageSources:
                 [
                     './models/projects/greenhave/slideA.png',
@@ -92,7 +92,7 @@ export default class ProjectsSection
                 floorTexture: this.resources.items.projectsGreenHaveFloorTexture,
                 link:
                 {
-                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    href: 'https://key-part-367816.framer.app/',
                     x: - 4.8,
                     y: - 3,
                     halfExtents:
@@ -103,7 +103,7 @@ export default class ProjectsSection
                 },
             },
             {
-                name: 'Ramiz Baghirov | 3 project',
+                name: 'Ramiz Baghirov | TimeLess',
                 imageSources:
                 [
                     './models/projects/timeless/slideA.png',
@@ -113,7 +113,7 @@ export default class ProjectsSection
                 floorTexture: this.resources.items.projectsTimelessFloorTexture,
                 link:
                 {
-                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    href: 'https://playful-booking-542958.framer.app/',
                     x: - 4.8,
                     y: - 3,
                     halfExtents:
@@ -124,7 +124,7 @@ export default class ProjectsSection
                 },
             },
             {
-                name: 'Ramiz Baghirov | 4 project',
+                name: 'Ramiz Baghirov | VegiEats',
                 imageSources:
                 [
                     './models/projects/vegieats/slideA.png',
@@ -135,7 +135,7 @@ export default class ProjectsSection
                 floorTexture: this.resources.items.projectsVegiEatsFloorTexture,
                 link:
                 {
-                    href: 'https://www.linkedin.com/feed/update/urn:li:activity:7228105275021381632/',
+                    href: '',
                     x: - 4.8,
                     y: - 3,
                     halfExtents:
